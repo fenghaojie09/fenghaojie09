@@ -67,7 +67,8 @@
 <meta property="og:image" content="http://fenghaojie09.github.io/fenghaojie09.github.io/2019/08/02/ceshi/%E6%88%AA%E5%9B%BE002.jpg">
 <meta property="og:image" content="http://fenghaojie09.github.io/fenghaojie09.github.io/2019/08/02/ceshi/%E9%B8%A1%E4%BD%A0%E5%A4%AA%E7%BE%8E.gif">
 <meta property="og:image" content="http://fenghaojie09.github.io/fenghaojie09.github.io/2019/08/02/ceshi/%E8%BF%98%E6%83%B3%E5%92%8B%E5%9C%B0.jpg">
-<meta property="og:updated_time" content="2019-08-07T01:15:31.741Z">
+<meta property="og:image" content="http://fenghaojie09.github.io/fenghaojie09.github.io/2019/08/02/ceshi/%E6%97%A0%E8%81%8A.jpg">
+<meta property="og:updated_time" content="2019-08-07T01:34:13.940Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="“如何使用GitHub和hexo搭建自己的博客（装逼指南）”">
 <meta name="twitter:description" content="准备工具Hexo:Hexo快速、简洁且高效的博客框架Node.js:建立在Chrome上的JavaScript运行引擎Git:一款免费、开源的分布式版本控制系统GitHub:国内一款面向开发者的云端开发平台，提供代码托管，运行空间，质量控制，项目管理等功能 先安装Git和Node.jsGit安装可以去官网下载（百度搜索Git或者直接点下面链接下载）Git官网网页是英文的，看不懂就跟着直觉点吧！ N">
@@ -309,7 +310,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-08-07 09:15:31" itemprop="dateModified" datetime="2019-08-07T09:15:31+08:00">2019-08-07</time>
+                <time title="修改时间：2019-08-07 09:34:13" itemprop="dateModified" datetime="2019-08-07T09:34:13+08:00">2019-08-07</time>
               </span>
             
           
@@ -329,26 +330,53 @@
 <h2 id="先安装Git和Node-js"><a href="#先安装Git和Node-js" class="headerlink" title="先安装Git和Node.js"></a>先安装Git和Node.js</h2><h3 id="Git安装"><a href="#Git安装" class="headerlink" title="Git安装"></a>Git安装</h3><p>可以去官网下载（百度搜索Git或者直接点下面链接下载）<br><a href="https://git-scm.com/" target="_blank" rel="noopener">Git官网</a><br><del>网页是英文的，看不懂就跟着直觉点吧！</del></p>
 <h3 id="Node-js安装"><a href="#Node-js安装" class="headerlink" title="Node.js安装"></a>Node.js安装</h3><p>同样去官网安装<br>懒得搜索的人直接点下面链接<br><a href="https://nodejs.org/en/" target="_blank" rel="noopener">node.js官网</a><br><del>网站同样是英文跟着直觉点吧</del><br><strong>下载完以后直接安装可以一路next，或者调整一下安装位置再一路next</strong><br><strong>安装完以后可以检查一下组件是否安装好</strong><br><strong>按下Win和R，打开运行。输入cmd</strong><br><strong>在出现的窗口里面输入</strong></p>
 <blockquote>
-<p><strong>1.node -v</strong><br><strong>2.npm -v</strong><br><strong>3.git –version</strong><br><strong>如果出现版本号就证明安装好了，如果没有就要回去检查安装过程</strong></p>
+<p><strong>1.node -v</strong><br><strong>2.npm -v</strong><br><strong>3.git –version</strong></p>
 </blockquote>
+<p><strong>如果出现版本号就证明安装好了，如果没有就要回去检查安装过程</strong></p>
 <h2 id="注册Github账号"><a href="#注册Github账号" class="headerlink" title="注册Github账号"></a>注册Github账号</h2><p>话不多说<br>直接<a href="https://github.com/" target="_blank" rel="noopener">Github官网</a><br><del>还是英文，慢慢来</del><br>注册完以后在右上角点击加号<br><img src="/fenghaojie09.github.io/2019/08/02/ceshi/%E6%88%AA%E5%9B%BE002.jpg" alt="点这个"><br>点击<strong>new repository</strong>创建新仓库。<br>仓库名称改成用户名加(.github.io),如果我的用户名是jinitaimei，<br>那么我的仓库名称就写成：<strong>jinitaimei.github.io</strong><br><img src="/fenghaojie09.github.io/2019/08/02/ceshi/%E9%B8%A1%E4%BD%A0%E5%A4%AA%E7%BE%8E.gif" alt></p>
 <h3 id="顺手配置一下SSH密钥"><a href="#顺手配置一下SSH密钥" class="headerlink" title="顺手配置一下SSH密钥"></a>顺手配置一下SSH密钥</h3><p>在桌面右键然后选择Git bash here<br>![点这个东东](截图001）<br>输入指令</p>
 <blockquote>
-<p>** cd ~/. ssh<br>如果提示 No such file or directory说明你第一次使用git。<br><strong>ssh-keygen -t rsa -c “邮箱地址”<br>连续三次回车，最后会在你的C盘用户目录中生成一个.ssh文件夹<br>找到</strong>id_rsa.pub<strong>文件用</strong>记事本<strong>打开全部复制<br>完成以后打开</strong>github主页<strong>右上角点开设置（setting连这个都不知道的话英语快白学了）<br>选择</strong>SSH and GPG keys<strong>新建一个SSH密钥<br>把复制好的全部粘贴到</strong>Key<strong>确认<br>**回去测试一下是否成功</strong><br><strong>ssh -T <a href="mailto:git@github.com" target="_blank" rel="noopener">git@github.com</a></strong><br>如果出现Are you sure you want to continue connecting (yes/no)?<br>当然Yes啦 不然还想咋地<br><img src="/fenghaojie09.github.io/2019/08/02/ceshi/%E8%BF%98%E6%83%B3%E5%92%8B%E5%9C%B0.jpg" alt><br>再输入一下配置<br>*<em>git config –global user.name “用户名”<br>*</em>git config –global user.email “你github注册的邮箱”</p>
+<p>**cd ~/. ssh</p>
+</blockquote>
+<p>如果提示 No such file or directory说明你第一次使用git。</p>
+<blockquote>
+<p><strong>ssh-keygen -t rsa -c “邮箱地址”</strong></p>
+</blockquote>
+<p>连续三次回车，最后会在你的C盘用户目录中生成一个.ssh文件夹<br>找到<strong>id_rsa.pub</strong>文件用<strong>记事本</strong>打开全部复制<br>完成以后打开<strong>github主页</strong>右上角点开设置（setting连这个都不知道的话英语快白学了）<br>选择<strong>SSH and GPG keys</strong>新建一个SSH密钥<br>把复制好的全部粘贴到<strong>Key</strong>确认<br><strong>回去测试一下是否成功</strong></p>
+<blockquote>
+<p><strong>ssh -T <a href="mailto:git@github.com" target="_blank" rel="noopener">git@github.com</a></strong></p>
+</blockquote>
+<p>如果出现Are you sure you want to continue connecting (yes/no)?<br>当然Yes啦 不然还想咋地<br><img src="/fenghaojie09.github.io/2019/08/02/ceshi/%E8%BF%98%E6%83%B3%E5%92%8B%E5%9C%B0.jpg" alt><br>再输入一下配置</p>
+<blockquote>
+<p><strong>git config –global user.name “用户名”</strong><br><strong>git config –global user.email “你github注册的邮箱”</strong></p>
 </blockquote>
 <h2 id="如果上面你都完成了，那恭喜你，你离做好只差一点细节了"><a href="#如果上面你都完成了，那恭喜你，你离做好只差一点细节了" class="headerlink" title="如果上面你都完成了，那恭喜你，你离做好只差一点细节了"></a><strong>如果上面你都完成了，那恭喜你，你离做好只差一点细节了</strong></h2><h1 id="2-搭建Hexo博客框架"><a href="#2-搭建Hexo博客框架" class="headerlink" title="2.搭建Hexo博客框架"></a>2.搭建Hexo博客框架</h1><p>####用Git bash 输入指令</p>
 <blockquote>
-<p>npm install -g hexo</p>
+<p><strong>npm install -g hexo</strong></p>
 </blockquote>
 <h5 id="在任意一个盘里创建一个”随便你起什么名字“的文件夹以后用来装代码"><a href="#在任意一个盘里创建一个”随便你起什么名字“的文件夹以后用来装代码" class="headerlink" title="在任意一个盘里创建一个”随便你起什么名字“的文件夹以后用来装代码"></a>在任意一个盘里创建一个”随便你起什么名字“的文件夹以后用来装代码</h5><p>git bash 输入</p>
 <blockquote>
-<p><strong>cd 文件夹的地址</strong>（如/d/文件夹名/）<br><strong>hexo init</strong><br><strong>hexo g</strong> （这个是生成静态文件的）<br><strong>hexo s</strong> （启动服务，开启本地预览）<br>这时候就可以打开浏览器看看内容啦<br>地址一般是<a href="http://localhost:4000" target="_blank" rel="noopener">http://localhost:4000</a><br>内东西没什么好看的因为默认主题很丑并且又没有文章在上面<br>回去CTRL+c结束预览</p>
+<p><strong>cd 文件夹的地址</strong>（如/d/文件夹名/）<br><strong>hexo init</strong><br><strong>hexo g</strong> （这个是生成静态文件的）<br><strong>hexo s</strong> （启动服务，开启本地预览）</p>
 </blockquote>
-<p>###配置一下deploy<br>在你创建的文件夹中找到_config.yml<br>用编辑器打开在最下面写入<br>deploy:<br>  type: git<br>  repository: <a href="mailto:git@github.com" target="_blank" rel="noopener">git@github.com</a>:liuxianan/liuxianan.github.io.git<br>  branch: maste<br>保存</p>
-<p>####安装插件</p>
+<p>这时候就可以打开浏览器看看内容啦<br>地址一般是<a href="http://localhost:4000" target="_blank" rel="noopener">http://localhost:4000</a><br>内东西没什么好看的因为默认主题很丑并且又没有文章在上面<br>回去CTRL+c结束预览</p>
+<h3 id="配置一下deploy"><a href="#配置一下deploy" class="headerlink" title="配置一下deploy"></a>配置一下deploy</h3><p>在你创建的文件夹中找到_config.yml<br>用编辑器打开在最下面写入</p>
 <blockquote>
-<p><strong>npm install hexo-deployer-git –save<br>等安装完就行了<br>**上传输入</strong><br><strong>hexo d</strong><br>这时候就可以访问你的博客啦<br>地址就是前面创建的**（用户名.github.io）</p>
+<p>deploy:</p>
+<blockquote>
+<blockquote>
+<p>type: git<br>repository: <a href="mailto:git@github.com" target="_blank" rel="noopener">git@github.com</a>:你的名字/你的名字.github.io.git<br>branch: maste</p>
 </blockquote>
+</blockquote>
+</blockquote>
+<p>保存（下面三行前面要空两个格）<br><img src="/fenghaojie09.github.io/2019/08/02/ceshi/%E6%97%A0%E8%81%8A.jpg" alt></p>
+<h4 id="安装插件"><a href="#安装插件" class="headerlink" title="安装插件"></a>安装插件</h4><blockquote>
+<p><strong>npm install hexo-deployer-git –save</strong></p>
+</blockquote>
+<p>等安装完就行了<br><strong>上传输入</strong></p>
+<blockquote>
+<p><strong>hexo d</strong></p>
+</blockquote>
+<p>这时候就可以访问你的博客啦<br>地址就是前面创建的<strong>（用户名.github.io）</strong></p>
 
     </div>
 
@@ -427,7 +455,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#准备工具"><span class="nav-number">1.</span> <span class="nav-text">准备工具</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#先安装Git和Node-js"><span class="nav-number">1.1.</span> <span class="nav-text">先安装Git和Node.js</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Git安装"><span class="nav-number">1.1.1.</span> <span class="nav-text">Git安装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Node-js安装"><span class="nav-number">1.1.2.</span> <span class="nav-text">Node.js安装</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#注册Github账号"><span class="nav-number">1.2.</span> <span class="nav-text">注册Github账号</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#顺手配置一下SSH密钥"><span class="nav-number">1.2.1.</span> <span class="nav-text">顺手配置一下SSH密钥</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#如果上面你都完成了，那恭喜你，你离做好只差一点细节了"><span class="nav-number">1.3.</span> <span class="nav-text">如果上面你都完成了，那恭喜你，你离做好只差一点细节了</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-搭建Hexo博客框架"><span class="nav-number">2.</span> <span class="nav-text">2.搭建Hexo博客框架</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#在任意一个盘里创建一个”随便你起什么名字“的文件夹以后用来装代码"><span class="nav-number">2.0.0.0.1.</span> <span class="nav-text">在任意一个盘里创建一个”随便你起什么名字“的文件夹以后用来装代码</span></a></li></ol></li></ol></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#准备工具"><span class="nav-number">1.</span> <span class="nav-text">准备工具</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#先安装Git和Node-js"><span class="nav-number">1.1.</span> <span class="nav-text">先安装Git和Node.js</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Git安装"><span class="nav-number">1.1.1.</span> <span class="nav-text">Git安装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Node-js安装"><span class="nav-number">1.1.2.</span> <span class="nav-text">Node.js安装</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#注册Github账号"><span class="nav-number">1.2.</span> <span class="nav-text">注册Github账号</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#顺手配置一下SSH密钥"><span class="nav-number">1.2.1.</span> <span class="nav-text">顺手配置一下SSH密钥</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#如果上面你都完成了，那恭喜你，你离做好只差一点细节了"><span class="nav-number">1.3.</span> <span class="nav-text">如果上面你都完成了，那恭喜你，你离做好只差一点细节了</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-搭建Hexo博客框架"><span class="nav-number">2.</span> <span class="nav-text">2.搭建Hexo博客框架</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#在任意一个盘里创建一个”随便你起什么名字“的文件夹以后用来装代码"><span class="nav-number">2.0.0.0.1.</span> <span class="nav-text">在任意一个盘里创建一个”随便你起什么名字“的文件夹以后用来装代码</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#配置一下deploy"><span class="nav-number">2.0.1.</span> <span class="nav-text">配置一下deploy</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#安装插件"><span class="nav-number">2.0.1.1.</span> <span class="nav-text">安装插件</span></a></li></ol></li></ol></li></ol></li></ol></div>
             
 
           </div>
